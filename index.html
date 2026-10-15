@@ -89,6 +89,75 @@ h2{
 }
 .stat b{display:block;font-family:'Cormorant Garamond';font-size:2.7rem;color:var(--blue-deep)}
 .stat span{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:#68728a}
+/* Live relationship counter */
+.love-counter{
+  margin:30px auto;
+  padding:25px 18px;
+  max-width:700px;
+  background:#f7faff;
+  border:1px solid #d9e4ff;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 10px 25px #5876b910;
+}
+
+.love-counter-title{
+  font-family:'Parisienne',cursive;
+  font-size:2rem;
+  color:var(--blue-deep);
+  margin-bottom:8px;
+}
+
+.love-counter-date{
+  font-size:.8rem;
+  color:#68728a;
+  margin-bottom:22px;
+}
+
+.love-time{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+
+.love-time-box{
+  padding:16px 5px;
+  background:#eaf0ff;
+  border:1px solid #d9e4ff;
+  border-radius:8px;
+}
+
+.love-time-box b{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,5vw,2.7rem);
+  color:var(--blue-deep);
+  line-height:1.2;
+}
+
+.love-time-box span{
+  display:block;
+  margin-top:5px;
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#68728a;
+}
+
+.love-counter-note{
+  margin:20px 0 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;
+  font-style:italic;
+  color:#68728a;
+}
+
+@media(max-width:450px){
+  .love-counter{padding:20px 10px}
+  .love-time{gap:6px}
+  .love-time-box{padding:12px 2px}
+  .love-time-box span{font-size:.58rem;letter-spacing:.5px}
+}
 .timeline{margin-top:35px}
 .timeline-item{display:grid;grid-template-columns:115px 1fr;gap:20px;margin:26px 0}
 .timeline-date{
@@ -220,6 +289,40 @@ h2{
    <p class="intro">
     “Entah bagaimana kamu sudah mengisi begitu banyak sudut kecil dalam hari-hariku. Dalam senyum yang tiba-tiba muncul, dalam hal-hal kecil yang jadi ingin kuceritakan, dalam percakapan yang selalu kutunggu, sampai dalam hari-hari biasa yang terasa sedikit lebih hangat karena ada kamu.”
    </p>
+    <!-- Live Relationship Counter -->
+<div class="love-counter">
+  <div class="love-counter-title">every second with you ♡</div>
+
+  <div class="love-counter-date">
+    Since August 15, 2026 · 23.00 WITA
+  </div>
+
+  <div class="love-time">
+    <div class="love-time-box">
+      <b id="loveDays">0</b>
+      <span>Hari</span>
+    </div>
+
+    <div class="love-time-box">
+      <b id="loveHours">00</b>
+      <span>Jam</span>
+    </div>
+
+    <div class="love-time-box">
+      <b id="loveMinutes">00</b>
+      <span>Menit</span>
+    </div>
+
+    <div class="love-time-box">
+      <b id="loveSeconds">00</b>
+      <span>Detik</span>
+    </div>
+  </div>
+
+  <p class="love-counter-note">
+    And my favorite moments are still with you. ♡
+  </p>
+</div>
    <div class="counter">
     <div class="stat"><b>02</b><span>months</span></div>
     <div class="stat"><b>∞</b><span>little moments</span></div>
